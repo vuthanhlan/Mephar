@@ -47,7 +47,7 @@ public class CartTest {
         Thread.sleep(1000);
         cartAction.clickCart();
         List<WebElement> products = cartAction.getListProduct();
-        Thread.sleep(10000);
+        Thread.sleep(2000);
         Assert.assertTrue(!products.isEmpty());
     }
 
@@ -78,6 +78,7 @@ public class CartTest {
         quantityInput.clear();
         cartAction.inputQuantity("3");
         String message = cartUI.getMess().getText();
+        Thread.sleep(2000);
         Assert.assertEquals(message,"Cập nhật thành công!");
     }
 

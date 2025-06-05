@@ -13,6 +13,6 @@ public class LogoutAction {
     }
     public void logout() {
         logoutPageUI.getLogoutDropdown().click();
-       logoutPageUI.getLogoutBtn().click();
+        logoutPageUI.getLogoutBtn().click();
     }
 }

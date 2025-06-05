@@ -14,8 +14,8 @@ public class ProductDetailAction {
         page = new ProductDetailUI(driver);
     }
     public String clickDetail() {
-       driver.get("https://mephar-sit.acdtech.asia/markets");
-       WebElement product = page.firstProduct();
+        driver.get("https://mephar-sit.acdtech.asia/markets");
+        WebElement product = page.firstProduct();
         System.out.println(product.getText());
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", product);
         product.click();

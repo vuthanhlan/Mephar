@@ -14,7 +14,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ui.AddNewProductPageUI;
-import utils.ExcelUntils;
+import untils.ExcelUntils;
 
 import java.awt.*;
 import java.time.Duration;
@@ -47,17 +47,17 @@ public class AddNewMedicineTest {
         List<Map<String, String>> excelData = ExcelUntils.readExcelData(excelFilePath, "Danh sách sản phẩm");
         Thread.sleep(2000);
 
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-            driver.get("https://mephar-sit.acdtech.asia/auth/sign-in/");
-            login.Login();
-            addNewMedicine.navigateToAddNewMedicinePage();
-            Map<String, String> rowData = excelData.get(8);
-            addNewMedicine.inputRequireData(rowData);
-            addNewMedicine.clickButtonLuu();
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-            WebElement toast = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(addNewProductPageUI.getMessageSuccessful())));
-            String message = toast.getText();
-            Assert.assertEquals(message,"Thêm mới thành công!");
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.get("https://mephar-sit.acdtech.asia/auth/sign-in/");
+        login.Login();
+        addNewMedicine.navigateToAddNewMedicinePage();
+        Map<String, String> rowData = excelData.get(8);
+        addNewMedicine.inputRequireData(rowData);
+        addNewMedicine.clickButtonLuu();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement toast = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(addNewProductPageUI.getMessageSuccessful())));
+        String message = toast.getText();
+        Assert.assertEquals(message,"Thêm mới thành công!");
 
     }
 

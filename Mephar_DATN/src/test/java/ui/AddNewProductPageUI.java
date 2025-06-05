@@ -24,7 +24,7 @@ public class AddNewProductPageUI {
         return wait.until(ExpectedConditions.elementToBeClickable(
                 By.xpath("//div[contains(text(),'"+ Name +"')]/parent::div")));
     }
-//    public String getSubMedicineName(String Name){return "//div[contains(text(),'"+Name+"')]/parent::div";}
+    //    public String getSubMedicineName(String Name){return "//div[contains(text(),'"+Name+"')]/parent::div";}
     public WebElement getRouteOfUse(){return driver.findElement(By.xpath("(//span[contains(text(),'Đường dùng')])[2]/parent::div"));}
     public WebElement getSubRouteOfUse(String RouteOfUse) {
         return wait.until(ExpectedConditions.elementToBeClickable(

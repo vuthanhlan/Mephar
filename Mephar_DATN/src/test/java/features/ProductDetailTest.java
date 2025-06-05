@@ -12,10 +12,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ui.ProductDetailUI;
-import utils.ExcelUntils;
 
-import java.util.List;
-import java.util.Map;
 
 public class ProductDetailTest {
     WebDriver driver;

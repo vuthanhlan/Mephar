@@ -16,7 +16,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ui.DeleteProductUI;
 import ui.RegisterPageUI;
-import utils.ExcelUntils;
+import untils.ExcelUntils;
 
 import java.time.Duration;
 import java.util.List;
